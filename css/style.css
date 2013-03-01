@@ -1,0 +1,11 @@
+body {
+background:#fff;
+font-family:Arial, sans-serif;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}

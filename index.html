@@ -1,0 +1,70 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SlickHover jQuery Plugin | 9bit Studios</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<h1>Slickhover</h1>
+
+<p>A slick hover effect jQuery Plugin...</p>
+
+<img src="images/column-image1.jpg" class="borderImage slickHoverPicture" alt="Night" />
+
+<img src="images/column-image2.jpg" class="borderImage slickHoverPlus" alt="Night" />
+
+<img src="images/column-image3.jpg" class="borderImage slickHoverZoom" alt="Night" />
+
+<img src="images/column-image4.jpg" class="borderImage slickHoverVideo" alt="Night" />
+
+<p>You can specify a "light" version...</p>
+
+<img src="images/column-image2.jpg" class="borderImage slickHoverPlusWhite" alt="Night" />
+
+<p>And add different colors...</p>
+
+<img src="images/column-image3.jpg" class="borderImage slickHoverPlusBlue" alt="Night" />
+
+ 
+<script src="js/jquery.slickhover.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(window).load(function(){
+
+  $(".slickHoverZoom").slickhover();
+  $(".slickHoverVideo").slickhover({icon:"images/slickhover/video-white.png"});
+  $(".slickHoverPicture").slickhover({icon:"images/slickhover/picture-white.png"});
+  $(".slickHoverPlus").slickhover({icon:"images/slickhover/plus-white.png"});
+  $(".slickHoverPlusWhite").slickhover({icon:"images/slickhover/plus-black.png", color:"#fff"});
+  $(".slickHoverPlusBlue").slickhover({icon:"images/slickhover/plus-white.png", color:"#003"});
+  
+});
+
+</script>
+
+
+
+<!--[if lt IE 9 ]>
+
+<![endif]-->
+
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started -->
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+  
+</body>
+</html>
