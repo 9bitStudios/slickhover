@@ -1,0 +1,4 @@
+slickhover
+==========
+
+slickhover jQuery plugin
