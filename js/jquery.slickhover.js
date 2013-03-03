@@ -1,6 +1,6 @@
 /*
 * File: jquery.slickhover.js
-* Version: 1.0.0
+* Version: 1.0.1
 * Description: Create a simple hover effect for images to open up in a popup using prettyPhoto or fancyBox of whatver else
 * Author: 9bit Studios
 * Copyright 2012, 9bit Studios
@@ -14,6 +14,7 @@
     $.fn.slickhover = function (options) {
 
         var defaults = $.extend({
+        	animateIn: false,
             icon: 'images/slickhover/zoom-white.png',
             color: '#000',
             opacity: 0.2,
@@ -46,7 +47,14 @@
 			
 			appendHTML: function() {
 			    if($(object).is('img')) {
-			        $(object).wrap('<div style="display:inline-block; background:url('+settings.icon+') center center no-repeat '+settings.color+';"></div>');
+
+			    	if(settings.animateIn) {	
+			    		var icon = '<span class="icon" style="position: absolute; left: -100%; top: 0; height: 100%; width: 100%; background:url('+settings.icon+') center center no-repeat"></span>';
+			    		$(object).wrap('<div style="position: relative; overflow:hidden; display:inline-block; background:'+settings.color+';"></div>');
+			    		$(icon).insertBefore($(object));
+			    	}
+			    	else
+			    		$(object).wrap('<div style="position: relative; overflow:hidden; display:inline-block; background:url('+settings.icon+') center center no-repeat '+settings.color+';"></div>');		
 			    }
 			},
 
@@ -58,10 +66,14 @@
 				
 				$(object).on({
 					mouseenter: function () {
-						$(this).stop().animate({ opacity: settings.opacity }, settings.speed);  	
+						$(this).stop().animate({ opacity: settings.opacity }, settings.speed);
+						$(object).prev().stop().animate({ left: '0px' }, settings.speed);  	
 					}, 
 					mouseleave: function () {
-						$(this).stop().animate({ opacity: 1 }, settings.speed);  	
+						$(this).stop().animate({ opacity: 1 }, settings.speed);
+						$(object).prev().stop().animate({ left: '100%' }, settings.speed, function(){
+							$(object).prev().css('left', '-100%');
+						});    	
 					}
 				});
 			}
