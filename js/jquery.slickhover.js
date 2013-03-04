@@ -67,13 +67,18 @@
 				$(object).on({
 					mouseenter: function () {
 						$(this).stop().animate({ opacity: settings.opacity }, settings.speed);
-						$(object).prev().stop().animate({ left: '0px' }, settings.speed);  	
+
+						if (settings.animateIn)
+							$(object).prev().stop().animate({ left: '0px' }, settings.speed);  	
 					}, 
 					mouseleave: function () {
 						$(this).stop().animate({ opacity: 1 }, settings.speed);
-						$(object).prev().stop().animate({ left: '100%' }, settings.speed, function(){
-							$(object).prev().css('left', '-100%');
-						});    	
+						
+						if (settings.animateIn) {
+							$(object).prev().stop().animate({ left: '100%' }, settings.speed, function(){
+								$(object).prev().css('left', '-100%');
+							});    	
+						}
 					}
 				});
 			}
