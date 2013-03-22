@@ -50,11 +50,11 @@
 
 			    	if(settings.animateIn) {	
 			    		var icon = '<span class="icon" style="position: absolute; left: -100%; top: 0; height: 100%; width: 100%; background:url('+settings.icon+') center center no-repeat"></span>';
-			    		$(object).wrap('<div class="slickhoverWrapper" style="position: relative; overflow:hidden; display:inline-block; background:'+settings.color+';"></div>');
+			    		$(object).wrap('<div class="slickhoverWrapper" style="position: relative; max-width:100%; overflow:hidden; display:inline-block; background:'+settings.color+';"></div>');
 			    		$(icon).insertBefore($(object));
 			    	}
 			    	else
-			    		$(object).wrap('<div class="slickhoverWrapper" style="position: relative; overflow:hidden; display:inline-block; background:url('+settings.icon+') center center no-repeat '+settings.color+';"></div>');		
+			    		$(object).wrap('<div class="slickhoverWrapper" style="position: relative; max-width:100%; overflow:hidden; display:inline-block; background:url('+settings.icon+') center center no-repeat '+settings.color+';"></div>');		
 			    }
 			},
 
