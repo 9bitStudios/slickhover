@@ -27,27 +27,19 @@
 						<h1>Slickhover.js</h1>
 						<h4>Slickhover jQuery plugin</h4>
 
-						<a class="nbs-button-large nbs-button-green" href="https://github.com/9bitStudios/slickhover/">View on GitHub</a>					
-						
+						<a class="nbs-button-large nbs-button-green" href="https://github.com/9bitStudios/slickhover/">View on GitHub</a>
 						<a class="nbs-button-large nbs-button-green" href="https://github.com/9bitStudios/slickhover/zipball/master">Download .zip</a>
 
 						<div class="clearout"></div>
 									
-						<iframe src="http://ghbtns.com/github-btn.html?user=9bitStudios&repo=slickhover&type=follow"
-  allowtransparency="true" frameborder="0" scrolling="0" width="145" height="20"></iframe>
-
-  						<iframe src="http://ghbtns.com/github-btn.html?user=9bitStudios&repo=slickhover&type=fork"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
-
-    					<iframe src="http://ghbtns.com/github-btn.html?user=9bitStudios&repo=slickhover&type=watch"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+						<!-- GIT HUB BUTTONS -->			
+						<iframe src="http://ghbtns.com/github-btn.html?user=9bitStudios&repo=slickhover&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="145" height="20"></iframe>
+  						<iframe src="http://ghbtns.com/github-btn.html?user=9bitStudios&repo=slickhover&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+    					<iframe src="http://ghbtns.com/github-btn.html?user=9bitStudios&repo=slickhover&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
 
 						<!-- SOCIAL SHARING -->
-
 						<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F9bitStudios.github.com%2Fslickhover&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
-
 						<a href="https://twitter.com/share" class="twitter-share-button" data-via="9bitStudios">Tweet</a>
-
 						<div class="g-plusone" data-size="medium"></div>
 
 						<script type="text/javascript">
@@ -134,7 +126,15 @@
 			</div>
 			
 		</div>	
-
+		
+		<div class="clearout"></div>
+		
+		<div class="row">
+			<div class="twelve columns">
+				<p> For documentation on how to use and available options... <a href="https://github.com/9bitStudios/slickhover/">see the repo on GitHub</a>
+			</div>
+		</div>	
+		
 		<script type="text/javascript">
 			$(window).load(function () {
 				$(".slickHoverPlus").slickhover({ icon: "images/slickhover/plus-white.png" });
@@ -160,88 +160,7 @@
 		</script>		
 		
 		<div class="clearout"></div>
-
-		<div class="row">	
-			<div class="twelve columns">
-				<p>All you have to do is call it on an image and pass in the options you want. For example...</p>
-
-				<code>&lt;script type="text/javascript"&gt;
-				$(window).load(function(){<br />
-				&nbsp;&nbsp;$('.slickHoverVideo.').slickhover({<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;icon: "images/slickHover/video-white.png",<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;color:"#ffcc66",<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;opacity:0.5,<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;speed:800,<br />
-				&nbsp;&nbsp;&nbsp;&nbsp;animateIn: true<br />
-				&nbsp;&nbsp;});<br />
-				});<br />
-				&lt;/script&gt;</code>
-
-				<h3>CSS</h3>
-
-				<p>For best results, set the following CSS for the images that you are calling slickhover on....</p>
-
-				<code>img {<br />
-				&nbsp;&nbsp;color: transparent;<br />
-				&nbsp;&nbsp;font-size: 0;<br />
-				&nbsp;&nbsp;vertical-align: middle;<br />
-				&nbsp;&nbsp;-ms-interpolation-mode: bicubic;<br />
-				&nbsp;&nbsp;position: relative;<br />
-				&nbsp;&nbsp;z-index: 2;<br />
-				}</code>
-
-				<h3>Options</h3>	
-				
-				<p>Below is a listing of options your can set....</p>
-
-				<table class="box-table">
-					<tbody>
-						<tr>
-							<th>Option</th>
-							<th>Values</th>
-							<th>Default Value</th>
-							<th>Description</th>
-							<th>Example</th>
-						</tr>
-						<tr>
-							<td class="script"><strong>icon</strong></td>
-							<td class="script"><em>String</em></td>
-							<td class="script">"images/slickhover/zoom-white.png"</td>
-							<td>The path to the icon (relative to the place slickhover is called from -- not the location of the .js file.) You could also use an absolute path e.g. http://www.yourwebsite.com/images/slickhover/zoom-white.png</td>
-							<td class="script">icon: "images/slickHover/video-white.png"</td>
-						</tr>
-						<tr>
-							<td class="script"><strong>color</strong></td>
-							<td class="script"><em>String (hex color)</em></td>
-							<td class="script">"#000000"</td>
-							<td>Hex value that changes the color of the overlay</td>
-							<td class="script">color: "#000033"</td>
-						</tr>
-						<tr>
-							<td class="script"><strong>opacity</strong></td>
-							<td class="script"><em>Decimal (between 0 and 1)</em></td>
-							<td class="script">0.2</td>
-							<td>How opaque to make the image, with 0 being completely opaque and 1 having no opacity. 0.5 would be the value in-between</td>
-							<td class="script">opacity: 0.6</td>
-						</tr>
-						<tr>
-							<td class="script"><strong>speed</strong></td>
-							<td class="script"><em>Integer (in milliseconds)</em></td>
-							<td class="script">400</td>
-							<td>The speed of the fade and animation transition. 1000 ms = 1 second</td>
-							<td class="script">speed: 800</td>
-						</tr>
-						<tr>
-							<td class="script"><strong>animateIn</strong></td>
-							<td class="script"><em>Boolean</em></td>
-							<td class="script">false</td>
-							<td>Sets whether or not to animate the icon in on hover.</td>
-							<td class="script">animateIn: true</td>
-						</tr>						
-					</tbody>
-				</table>	
-			</div>
-		</div>
+			
 	</div>
 	
 	<footer>
@@ -254,7 +173,7 @@
 				</div>
 			</div>
 		</div>		
-	</footer>
+	</footer>	
 	
 </body>
 </html>
