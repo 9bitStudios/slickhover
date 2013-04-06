@@ -40,7 +40,7 @@ Below is a listing of options your can set....
 
 | Option | Value | Default Value | Description | Example |
 | --- | --- | --- | --- | --- |
-| icon | String | "images/slickhover/zoom-white.png" | The path to the icon (relative to the place slickhover is called from -- not the location of the .js file.) You could also use an absolute path e.g. "http://www.yourwebsite.com/images/slickhover/zoom-white.png" | icon: "images/slickHover/video-white.png" |
+| icon | String | "images/slickhover/zoom-white.png" | The path to the icon (relative to the place slickhover is called from -- not the location of the .js file.) You could also use an absolute path e.g. "http://www.9bitStudios.com/images/slickhover/zoom-white.png" | icon: "images/slickHover/video-white.png" |
 color |  String (hex color) | "#000000" | Hex value that changes the color of the overlay | color: "#000033"
 opacity | Decimal (between 0 and 1) | 0.2 | How opaque to make the image, with 0 being completely opaque and 1 having no opacity. 0.5 would be the value in-between | opacity: 0.6
 speed | Integer (in milliseconds) | 400 | The speed of the fade and animation transition. 1000 ms = 1 second | speed: 800
