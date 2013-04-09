@@ -19,6 +19,8 @@ $(window).load(function(){
 });
 ```
 
+It's best to call Slickhover.js on $(window).load (as opposed to $(document).ready) so that Slckhover can figure out positioning based on image dimenstions.
+
 ### CSS
 
 For best results, set the following CSS for the images that you are calling slickhover on....
