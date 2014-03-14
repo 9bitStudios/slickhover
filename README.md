@@ -9,7 +9,7 @@ All you have to do is call it on an image and pass in the options you want. For 
 
 ```javascript
 $(window).load(function(){
-  $('.slickHoverVideo.').slickhover({
+  $('.slickHoverVideo').slickhover({
     icon: "images/slickHover/video-white.png",
     color:"#ffcc66",
     opacity:0.5,
@@ -23,7 +23,7 @@ It's best to call Slickhover.js on $(window).load (as opposed to $(document).rea
 
 ### CSS
 
-For best results, set the following CSS for the images that you are calling slickhover on....
+For best results, set the following CSS for the images that you are calling Slickhover on....
 
 ```css
 img {
